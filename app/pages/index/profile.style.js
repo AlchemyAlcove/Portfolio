@@ -38,16 +38,20 @@ export default Styled.div`
     .details {
       display: inline-block;
       vertical-align: top;
-      width: 135px;
+      width: 175px;
+      font-size: 14px;
 
-      .detail {
+      a.detail {
+        display: block;
+        color: initial;
+        text-decoration: none;
+
         .detail-title {
-          font-weight: 700;
-          font-family: ${props => props.theme.fonts[1]};
+          display: inline-block;
         }
 
         .detail-value {
-          font-size: 14px;
+          display: inline-block;
           margin: 6px 0 20px 6px;
         }
       }
@@ -70,7 +74,7 @@ export default Styled.div`
     .about {
       display: inline-block;
       vertical-align: top;
-      width: 390px;
+      width: 350px;
 
       p {
         font-size: 14px;

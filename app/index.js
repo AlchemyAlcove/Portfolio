@@ -1,9 +1,12 @@
 import Promise from "promise-polyfill"; // eslint-disable-line no-unused-vars
 import Router from "./router";
 import React from "react"; // eslint-disable-line no-unused-vars
+import IconLibrary from "./utils/iconLibrary";
 import { render } from "react-dom";
 import { isNil } from "lodash";
 import { injectGlobal } from "emotion";
+
+IconLibrary();
 
 injectGlobal`
   html, body, #react-app {
