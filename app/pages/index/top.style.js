@@ -24,7 +24,7 @@ export default Styled.div`
         font-size: 63px;
         line-height: 103px;
         color: ${props => props.theme.colors.pageBackground};
-        margin: 0 0 10px;
+        margin: 0;
         border-bottom: 1px solid rgba(${props => HexRgb(props.theme.colors.pageBackground).join(", ")}, 0.7);
 
         @media (max-width: ${props => props.theme.dimensions.tabletBreakpoint}px) {
