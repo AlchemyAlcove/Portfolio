@@ -19,11 +19,6 @@ module.exports = (env, argv) => {
     })
   ];
 
-  if(env.production) {
-    plugins.push(
-      new CleanWebpackPlugin(["public"])
-    )
-  }
   if(env.performance) {
     plugins.push(
       new BundleAnalyzerPlugin()
