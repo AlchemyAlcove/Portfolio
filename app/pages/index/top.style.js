@@ -1,3 +1,4 @@
+import Full from "../../../assets/images/full.jpg";
 import HexRgb from "hex-rgb";
 import Styled from "react-emotion";
 
@@ -6,7 +7,7 @@ export default Styled.div`
     height: 100vh !important;
     width: 100vw;
     position: relative;
-    background: url(/images/full.jpg) no-repeat center center;
+    background: url(${Full}) no-repeat center center;
     background-size: cover;
 
     .top-stripe {

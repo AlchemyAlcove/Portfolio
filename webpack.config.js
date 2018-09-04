@@ -64,12 +64,8 @@ module.exports = (env, argv) => {
           }
         }, {
           test: /\.(svg|png|gif|jpe?g)$/,
-          exclude: /node_modules/,
           use: [{
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]"
-            }
+            loader: "file-loader"
           }]
         }
       ]

@@ -1,3 +1,4 @@
+import Headshot from "../../../assets/images/headshot.png";
 import React from "react";
 import Style from "./profile.style";
 
@@ -24,7 +25,7 @@ class Profile extends React.Component {
             </div>
           </div>
           <div className="profile-image">
-            <img src="/images/headshot.png"/>
+            <img src={Headshot}/>
           </div>
           <div className="about">
             <h4>About me</h4>
