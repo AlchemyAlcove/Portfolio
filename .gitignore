@@ -17,6 +17,7 @@
 .tmproj
 nbproject
 Thumbs.db
+.firebase
 
 # NPM packages folder.
 node_modules/
