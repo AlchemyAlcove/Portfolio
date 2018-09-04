@@ -16,22 +16,26 @@ jobs:
       - run: npm run lint
       - run: npm run lint:css
 
-  deploy-job:
+  deploy:
     working_directory: ~/portfolio
     docker:
       - image: circleci/node:7.9
     steps:
-      - run:
-        name: Deploy Master to Firebase
-        command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+      - restore_cache:
+          key: deps-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: deps-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
 workflows:
   version: 2
-
-  -deploy:
+  deploy:
     jobs:
       - build
-      - deploy-job:
+      - deploy:
         requires:
           - build
         filters:
